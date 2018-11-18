@@ -21,3 +21,10 @@ ng build
 ng build --prod
 ```
 
+
+
+* 生成控件
+
+```
+ng g c home
+```
