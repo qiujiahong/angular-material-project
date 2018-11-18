@@ -1,4 +1,12 @@
-import {MatButtonModule, MatCheckboxModule, MatMenuModule, MatIconModule, MatCardModule,MatTableModule } from '@angular/material';
+import {
+  MatButtonModule, 
+  MatCheckboxModule, 
+  MatMenuModule, 
+  MatIconModule, 
+  MatCardModule,
+  MatTableModule,
+  MatTabsModule 
+} from '@angular/material';
 import {NgModule} from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -11,7 +19,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatMenuModule,
     MatIconModule,
     MatCardModule,
-    MatTableModule
+    MatTableModule,
+    MatTabsModule
   ],
   exports: [
     BrowserAnimationsModule,
@@ -20,7 +29,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatMenuModule,
     MatIconModule,
     MatCardModule,
-    MatTableModule
+    MatTableModule,
+    MatTabsModule
   ],
 })
 

@@ -27,4 +27,18 @@ ng build --prod
 
 ```
 ng g c home
+ng g c courses-card-list
 ```
+
+
+* 传入参数   
+  * 父亲引用   
+  ```html
+  <app-courses-card-list [courses]="beginnerCourses">
+  ```
+  * 儿子注入父亲传入的参数  
+
+  ```js
+  @Input()
+  courses: Course[];
+  ```
