@@ -1,3 +1,14 @@
+# drop down menu
+
+* 文件material.ts 加入依赖，导入导出 MatMenuModule
+
+
+```ts
+import {MatMenuModule} from '@angular/material/menu';
+```
+
+
+```html
 <button mat-icon-button  mat-icon-button [matMenuTriggerFor]="menu">
 <mat-icon>menu</mat-icon>
 </button>
@@ -15,3 +26,6 @@
     <span>Disable alerts</span>
   </button>
 </mat-menu>
+```
+
+https://material.angular.io/components/menu/overview
