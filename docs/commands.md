@@ -27,9 +27,17 @@ ng build --prod
 
 ```
 ng g c home
+# 生成一个组件
 ng g c courses-card-list
+# 生成一个服务
+ng g s services/lessions
 ```
 
+* 安装组件
+
+```
+cnpm i --save @types/express
+```
 
 * 传入参数   
   * 父亲引用   

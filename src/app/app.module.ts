@@ -8,6 +8,10 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { TopMenuComponent } from './top-menu/top-menu.component';
 import { CoursesCardListComponent } from './courses-card-list/courses-card-list.component';
+import { CourseComponent } from './course/course.component';
+import {HttpClientModule} from "@angular/common/http";
+import {CoursesService} from "./services/courses.service";
+import {CourseResolver} from "./services/course.resolver";
 
 
 @NgModule({
@@ -16,14 +20,20 @@ import { CoursesCardListComponent } from './courses-card-list/courses-card-list.
     HomeComponent,
     AboutComponent,
     TopMenuComponent,
-    CoursesCardListComponent
+    CoursesCardListComponent,
+    CourseComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    CoursesService,
+    CourseResolver
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
