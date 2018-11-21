@@ -21,8 +21,13 @@ export class CourseComponent implements OnInit {
   ngOnInit() {
     this.course = this.route.snapshot.data["course"];
 
+    console.log("try to find all lessons : " + this.course.id)
     this.coursesService.findAllCourseLessons(this.course.id)
-    .subscribe(lessons => this.dataSource.data = lessons )
+    .subscribe(lessons => 
+      {
+        this.dataSource.data = lessons ;
+        console.log("get lessons:"+JSON.stringify(lessons) );
+      })
 
 
   }

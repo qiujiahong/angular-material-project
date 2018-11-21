@@ -32,8 +32,8 @@ export class CoursesService {
         return this.http.get('http://localhost:3000/lessons', {
             params: new HttpParams()
                 .set('courseId', courseId.toString())
-                .set('pageNumber', "0")
-                .set('pageSize', "1000")
+                .set('_page', "0")
+                .set('_limit', "3")
         }).pipe(
             map(res =>  res["payload"])
         );
@@ -48,8 +48,8 @@ export class CoursesService {
                 .set('courseId', courseId.toString())
                 .set('filter', filter)
                 .set('sortOrder', sortOrder)
-                .set('pageNumber', pageNumber.toString())
-                .set('pageSize', pageSize.toString())
+                .set('_page', pageNumber.toString())
+                .set('_limit', pageSize.toString())
         }).pipe(
             map(res =>  res["payload"])
         );
